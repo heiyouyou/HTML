@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>块级元素与行内元素的布局方式</title>
+<!--css/js-->
+<style>
+	*{
+		padding:0px;
+		margin:0px;
+	}
+	a{
+		text-decoration:none;
+		color:#fff;
+	}
+	body{
+		font-family:"微软雅黑";
+		font:14px;
+	}	
+	ul,li{
+		list-style:none;
+	}
+	p{
+		text-indent:2em;
+	}
+		.header{
+		width:100%;
+		height:70px;
+		background:#479A39;
+	}
+	.header .h1{
+		width:80%;
+		height:70px;
+		margin:0 auto;
+	}
+	.header .h1 ul li{
+		float:left;
+		padding:0 30px;
+		border-right:1px #A3A3B7 solid;
+		font-size:20px;
+		line-height:70px;
+	}
+	.header .h1 ul li a{
+		display:block;
+		color:#FFFBFB;
+	}		
+	.box1{
+		background:red;
+		margin-top:10px;
+	}
+	.box2{
+		background:orange;
+		margin-top:10px;
+	}
+	.box3{
+		background:yellow;
+		margin-top:10px;
+	}
+	.P1{
+		background:green;
+		margin-top:30px;
+		display:block;
+		width:100%;
+		height:100px;
+	}
+	/*inline-block:，不会独占一行，但是受到宽度和高度影响*/
+	.P3{
+		background:#8205F9;
+		margin-top:30px;
+		display:inline-block;
+		width:30%;
+	}
+	.P2{
+		background:blue;
+		margin-top:30px;
+		display:inline;
+	}
+</style>
+
+ </head>
+ <body>
+ 		<div class="header">
+ 			<div class="h1">
+ 				<ul>
+ 					<li><a href="#">首页</a></li>
+ 					<li><a href="#">直播</a></li>
+ 					<li><a href="#">动漫</a></li>
+ 					<li><a href="#">电视剧</a></li>
+ 					<li><a href="#">电影</a></li>
+ 					<li><a href="#">综艺</a></li>	
+ 				</ul>
+ 			</div>
+ 		</div>
+
+ 		<div class="box1">
+ 			<p>
+ 				这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；二则生鲜电商普遍高客单将用户锁定在中产阶级之上，大众用户需求并未被满足；三则O2O服务方式的在末端的效率可以改善前端供应链。
+ 			</p>
+ 		</div>
+ 		<div class="box2">
+ 			<p>
+ 				这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；二则生鲜电商普遍高客单将用户锁定在中产阶级之上，大众用户需求并未被满足；三则O2O服务方式的在末端的效率可以改善前端供应链。
+ 			</p>
+ 		</div>
+ 		<div class="box3">
+ 			<p>
+ 				这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；二则生鲜电商普遍高客单将用户锁定在中产阶级之上，大众用户需求并未被满足；三则O2O服务方式的在末端的效率可以改善前端供应链。
+ 			</p>
+ 		</div>
+ 
+		<p class="P1">
+			这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；二则生鲜电商普遍高客单将用户锁定在中产阶级之上，大众用户需求并未被满足；三则O2O服务方式的在末端的效率可以改善前端供应链。
+			
+		</p>
+		<p class="P3">
+			这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；
+			
+		</p>
+		<p class="P2">
+			这些大咖不仅拉高了生鲜电商、生鲜O2O的创业门槛，也引起了我们对生鲜O2O重视。BAJ也从观望中进行积极布局：2014年底，阿里巴巴千万美元级投入易果生鲜。接受了投资的生鲜电商一般都会选择慢烧钱，长时间熬，谋求未来生鲜电商格局中的霸主地位。生鲜电商将另一只脚伸向生鲜O2O，一则看到移动消费的机会；二则生鲜电商普遍高客单将用户锁定在中产阶级之上，大众用户需求并未被满足；三则O2O服务方式的在末端的效率可以改善前端供应链。
+		</p>
+		
+ </body>
+ </html>

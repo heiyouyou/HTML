@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>丘比特之心</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: url(images/2.jpg) no-repeat; 
+		background-size: cover;
+	}
+	div	{
+		width: 150px;
+		height: 150px;
+	}
+	.box { 
+		background: #FFC0CB;
+		margin: 200px auto;
+		transform: rotate(45deg);/负数逆时针旋转，正数顺时针旋转/
+		position: relative;/*相对定位*/
+		transition: all 1s ease;/*缩小回来的渐变效果*/
+	}
+	.box:hover{/*这里的效果只是针对.box还是.box、.b_first、b_second都共享？*/
+		transform: scale(2) rotate(45deg);/*放大倍数为1是不变的 这里的旋转角度要加上是因为不加的话会覆盖上面的旋转效果*/
+		transition: all 1s ease;/*变大的渐变效果*/
+	}
+	.b_first,.b_second {/*组合选择器*/
+		border-radius: 50%;/*可以让其变成圆*/
+	}
+	.b_first {
+		background: #FFC0CB;
+		position: absolute;/*绝对定位*/
+		top: -75px;/*以顶部为参照：正数向下边移动(远离)，负数向上边移动(靠近)?*/
+		left: 0;
+		z-index: 1;
+	}
+	.b_second {
+		background: #FFC0CB;
+		position: absolute;/*绝对定位*/
+		top: 0;
+		left: -75px;/*以左边为参照：正数向右边移动(远离)，负数向左边移动(靠近)?*/
+		z-index: 2;/*可以使圆置顶，只要比另一个的值大就行*/
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<div class="b_first"></div>
+		<div class="b_second"></div>
+	</div>
+	<!--音乐播放标签，autoplay自动播放，loop无限循环-->
+	<audio src="mp3/2.mp3" autoplay loop></audio>
+
+</body>
+</html>

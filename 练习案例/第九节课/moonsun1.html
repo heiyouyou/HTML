@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>CSS3创造的太极</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: gray;
+	}
+	/*box start*/
+	.box {
+		width: 192px;
+		height: 96px;
+		border: 1px solid #000;
+		margin: 100px auto 20px;
+		border-radius: 50%;
+		border-width: 4px 4px 100px 4px;/*边框的粗细(宽度)：上 右 下 左*/
+		position: relative;
+		background: #fff;
+	}
+
+	.box:before {
+		content: "";
+		width: 22px;
+		height: 22px;
+		border: 37px solid #000;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 0px;
+		background: #fff;
+	}
+	.box:after {
+		content: "";
+		width: 22px;
+		height: 22px;
+		border: 37px solid #fff;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		background: #000;
+	}
+	/*自定义关键帧*/
+	@-webkit-keyframes free {/*兼容谷歌*/
+		0%{ transform: rotate(0deg);}
+		25%{ transform: rotate(90deg);}
+		50%{ transform: rotate(180deg);}
+		75%{ transform: rotate(270deg);}
+		100%{ transform: rotate(360deg);}
+		/*0%-100%等同于from-to*/
+	}
+	@-moz-keyframes free {/*兼容火狐*/
+		0%{ transform: rotate(0deg);}
+		25%{ transform: rotate(90deg);}
+		50%{ transform: rotate(180deg);}
+		75%{ transform: rotate(270deg);}
+		100%{ transform: rotate(360deg);}
+	}
+	.rotate {
+		/*-webkit-animation: free 0.8s linear infinite 1s alternate;可以扩写成以下*/
+		-moz-animation: free 0.1s ease infinite 2s normal;
+		-webkit-animation-name: free;/*调用关键帧的名字*/
+		-webkit-animation-duration: 0.8s;/*一次持续执行的时间*/
+		-webkit-animation-timing-function: linear;/*执行的曲线，就是旋转的快慢方式：
+		ease:开始到结束慢慢变快
+		ease-in:由快到慢
+		ease-out:由慢到快
+		linear: 匀速转动;*/
+		-webkit-animation-iteration-count: infinite;/*转动的次数,可以是具体的次数，也可以是无限次(infinite)*/
+		-webkit-animation-delay: 1s;/*延迟执行的时间*/
+		-webkit-animation-direction: alternate;/*转动的方向，有normal(正常方向)，alternate反向*/
+	}
+	/*box end*/
+</style>
+</head>
+<body>
+	<h1 style="margin: 0 auto;width: 400px;">CSS3创造的太极</h1>
+	<div class="box rotate"></div>
+</body>
+</html>

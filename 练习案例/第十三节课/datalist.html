@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>对下拉选项框的更深认识</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+	}
+</style>
+</head>
+<body>
+	<input list="car"/>
+	<datalist id="car">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</datalist>
+	<!--下拉选项框,上面的相当于下面这个，datalist与input的结合使用，datalist要给id,input要给list,并且两者要相同-->
+	<select name="choice">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	<select/>
+	<!--单选框-->
+	<label for="only"/>
+	<input type="radio" name="sex" id="only"/>男
+	<label for="only1"/>
+	<input type="radio" name="sex" id="only1"/>女
+	<!--以上等同于下面，上面的input要给id,并且label要给for属性值与id一样-->
+	<label><input type="radio" name="sex" value="nv" />女</label>
+	<label><input type="radio" name="sex" value="nan" checked="checked"/>男</label>
+</body>
+</html>

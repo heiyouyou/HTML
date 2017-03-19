@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>动物园首页</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+body{font-size:12px;font-family:helvetica,arial,sans-serif;background:url(images/bg.jpg) no-repeat;background-size:cover;/*background-attachment:fixed;将背景图片固定*/}
+ul{list-style:none;}
+a{text-decoration:none;}
+.box{width:979px;margin:0 auto;padding:0 10px 10px 10px;}
+/*header start*/
+#header{padding:0 0 20px 0;background:url(images/logo.png) no-repeat;}
+#nav_right{background:url(images/menu.png);margin-left:205px;overflow:hidden;padding:8px 0;}
+#nav_right span a{font-size:14px;border-right:1px solid #111;font-weight:600;display:inline-block;line-height:10px;/*用来缩短边框线*/
+margin-bottom:10px;padding:0 10px;color:#695a58;transition:all 1s ease;}
+#nav_right ul li a{position:relative;}
+#nav_right ul li a:before{content:"";width:100px;height:2px;background:#583021;position:absolute;left:0;bottom:0;transition:all 1s ease;transform:scale(0);}
+#nav_right span:first-child a{margin-left:40px;color:#930;}
+#nav_right ul li{float:left;}
+#nav_right ul li img{width:109px;height:34px;}
+#nav_right ul li a:hover:before{transition:all 1s ease;transform:scale(1.2);}
+/*header end*/
+/*banner start*/
+.banner{width:979px;height:442px;position:relative;margin:10px 0;}
+/*img-list start*/
+.banner #img-list img{width:970px;height:420px;}
+.banner #img-list li{border: 11px solid #fff;width:960px;border-radius:10px;height:420px;overflow:hidden;}
+.banner #img-list li:first-child img{width:979px;height:442px;}
+.banner #img-list li:first-child{border:none;overflow:visible;}
+.banner #img-list a{display:inline-block;}
+.banner #img-list li{position:absolute;top:0;left:0;opacity:0;transition: all .5s ease;}
+.banner #img-list li:nth-child(1){position:absolute;top:0;left:0;opacity:1;}
+/*img-list end*/
+/*btn-list start*/
+.banner #btn-list{position:absolute;bottom:80px;right:40%;background:rgba(0, 0, 0, 0.3);padding:10px 20px 10px 10px;border-radius:20px;}
+.banner #btn-list
+li{width:30px;float:left;margin-left:10px;background:#fff;text-align:center;line-height:30px;border-radius:50%;cursor:pointer;}
+.banner #btn-list li.none{background:#E96106;color:#fff;}
+/*btn-list end*/
+.prev,.next{position:absolute;top:35%;z-index:10;color:#ddd;font-size:60px;font-weight:700;padding:20px;background:rgba(0, 0, 0, 0.3);opacity:0;transition: all 1s ease;}
+.prev{left:10px;}
+.next{right:10px;}
+.banner:hover .prev{opacity:1;transition: all 1s ease;}
+.banner:hover .next{opacity:1;transition: all 1s ease;}
+/*banner end*/
+/*main start*/
+#main:after{/*清除浮动*/
+content:"";display:block;clear:both;}
+#member,#news{width:475px;height:220px;background:rgba(255,255,255,0.6);border-radius:10px;padding:10px 0 0 10px;}
+#main h2{color:#4d4d4d;}
+/*member start*/
+#member{float:left;}
+#Tab{margin-top:10px;}
+#Tab-list{float:left;margin-right:5px;}
+#Tab-list ul li{width:20px;background:#eee;padding:8px;text-align:center;border-radius:5px;margin-bottom:10px;}
+#Tab-list ul li:hover{background:#341D0F;color:#fff;}
+#Tab-img{display:inline-block;width:428px;height:152px;}
+/*end member*/
+/*news start*/
+#news{float:right;}
+#news a{color:#111;text-decoration:none;}
+#news a:hover{text-decoration:underline;}
+#Text{margin-top:10px;}
+#Text dl dt{float:left;width:390px;padding-left:10px;line-height:22px;background:url(images/spot.gif) no-repeat;/*小圆点用背景图片来做*/
+background-position:center left;/*定位小圆点到文本的中线处*/
+}
+#Text dl dd{line-height:22px;}
+/*end news*/
+/*main end*/
+/*link start*/
+#link{height:70px;background:url(images/link1.png);margin:10px 0;padding:10px;}
+#link ul{overflow:hidden;background:url(images/link2.png) no-repeat right center;}
+#link ul li{float:left;margin-left:40px;}
+#link ul li:first-child{margin-left:140px;}
+#link ul li:hover{transform:scale(1.2);}
+/*link end*/
+/*content start*/
+#left_text,#right_text{width:300px;height:220px;background:rgba(255,255,255,0.6);border-radius:8px;}
+#left_text{width:292px;height:212px;float:left;padding:10px 0 0 10px;}
+#left_text p{line-height:20px;}
+#left_text p span{color:#7B1F0A;}
+#left_text h2{color:#D83F00;}
+#right_text{float:right;background:url(images/gorilla.gif) no-repeat;background-size:cover;}
+#center_text{height:220px;text-align:center;background:rgba(255,255,255,0.6);border-radius:8px;margin:0 312px;}
+/*content end*/
+/*footer start*/
+#footer{margin-top:10px;background:#1a1a1a;padding:10px;}
+#footer p:first-child a{color:#bb7e08;margin:0 10px;line-height:2px;border:1px solid transparent;}
+#footer p:first-child a:hover{border:1px solid red;}
+#footer p:last-child{color:#bb7e08;margin-left:10px;}
+/*footer end*/
+</style>
+</head>
+<body>
+	<!--box start-->
+	<div class="box">
+		<!--header start-->
+		<div id="header">
+			<div id="nav">
+				<div id="nav_right">
+					<span><a href="#">中文</a></span>
+					<span><a href="#">English</a></span>
+					<span><a href="#">français</a></span>
+					<span><a href="#">한국어</a></span>
+					<ul>
+						<li><a href="#"><img src="images/n1.png" alt="1"/></a></li>
+						<li><a href="#"><img src="images/n2.png" alt="2"/></a></li>
+						<li><a href="#"><img src="images/n3.png" alt="3"/></a></li>
+						<li><a href="#"><img src="images/n4.png" alt="4"/></a></li>
+						<li><a href="#"><img src="images/n5.png" alt="5"/></a></li>
+						<li><a href="#"><img src="images/n7.png" alt="7"/></a></li>
+						<li><a href="#"><img src="images/n6.png" alt="6"/></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--header end-->
+		<!--banner start-->
+		<div class="banner" id="banner">
+			<a class="prev" id="prev" href="javascrip:void(0);">&lt;</a>
+			<a class="next" id="next" href="javascrip:void(0);">&gt;</a>
+			<ul id="img-list">
+				<li><a href="javascrip:void(0);"><img src="images/banner1.png" alt="1"></a></li>
+				<li><a href="javascrip:void(0);"><img src="images/banner2.jpg" alt="2"></a></li>
+				<li><a href="javascrip:void(0);"><img src="images/banner3.jpg" alt="3"></a></li>
+				<li><a href="javascrip:void(0);"><img src="images/banner4.jpg" alt="4"></a></li>
+				<li><a href="javascrip:void(0);"><img src="images/banner5.jpg" alt="5"></a></li>
+			</ul>
+			<ul id="btn-list">
+				<li class="none"><strong>1</strong></li>
+				<li><strong>2</strong></li>
+				<li><strong>3</strong></li>
+				<li><strong>4</strong></li>
+				<li><strong>5</strong></li>
+			</ul>
+		</div>
+		<!--banner end-->
+		<!--main start-->
+		<div id="main">
+			<div id="member">
+				<h2>会员中心</h2>
+				<div id="Tab">
+					<div id="Tab-list">
+						<ul>
+							<li>公益活动</li>
+							<li>录制节目</li>
+						</ul>
+					</div>
+					<div id="Tab-img">
+						<img src="images/m3.jpg" width="428" height="152" alt="1">
+					</div>
+				</div>
+			</div>
+			<div id="news">
+				<h2>新闻轶事</h2>
+				<div id="Text">
+					<dl>
+						<dt><a href="javascript:void(0);">关于动物园停车费的收费公告</a></dt>
+						<dd>2012-09-05</dd>
+
+						<dt><a href="javascript:void(0);">开学季——动物园里也有开学典礼</a></dt>
+						<dd>2012-08-29</dd>
+
+						<dt><a href="javascript:void(0);">喜迎“六•一”，小动物们欢欢喜喜过起了儿童节</a></dt>
+						<dd>2012-06-01</dd>
+
+						<dt><a href="javascript:void(0);">迎“五•一”，野生动物园旧貌换新颜</a></dt>
+						<dd>2012-05-01</dd>
+
+						<dt><a href="javascript:void(0);">稀有白袋鼠安家野生动物园</a></dt>
+						<dd>2012-04-23</dd>
+						<dt><a href="javascript:void(0);">我园熊虎散放区被野生动物保护协会命名为“野生动物园优秀展区”</a></dt>
+						<dd>2012-04-14</dd>
+						<dt><a href="javascript:void(0);">散放区乘车广场的新候车长廊</a></dt>
+						<dd>2012-03-20</dd>
+						<dt><a href="javascript:void(0);">“Hi，动物朋友！”走进野生动物园，和动物来个亲密接触</a></dt>
+						<dd>2012-03-03</dd>
+					<dl>
+				</div>
+			</div>
+		</div>
+		<div id="link">
+			<ul>
+				<li><a href="javascript:void(0);"><img src="images/l1.png"/></a></li>
+				<li><a href="javascirpt:void(0);"><img src="images/l2.png"/></a></li>
+				<li><a href="javascirpt:void(0);"><img src="images/l3.png"/></a></li>
+				<li><a href="javascirpt:void(0);"><img src="images/l4.png"/></a></li>
+				<li><a href="javascirpt:void(0);"><img src="images/l5.png"/></a></li>
+				<li><a href="javascirpt:void(0);"><img src="images/l6.png"/></a></li>
+			</ul>
+		</div>
+		<!--banner end-->
+		<!--content start-->
+		<div id="content">
+			<div id="left_text">
+				<h2>参观须知</h2>
+					<p>
+						1.禁止向动物投掷石块、食物和其他物品。<span>Do not throw stones, food or other objects at animals.</span>
+					</p>
+					<p>
+						2.禁止恐吓动物。<span>Do not scare or tease animals.</span>
+					</p>
+					<p>
+						3.欲上到顶层参观的游客应排队上楼，以免发生危险。<span>Please queue up to get to the top floor. Do not crowd.</span>
+					</p>
+					<p>
+						4.自觉遵守上述规定，以确保游客与动物的安全。<span>Please abide by the above regulations to ensure the safety of both visitors and animals.</span>
+					</p>
+			</div>
+			<div id="right_text"></div>
+			<div id="center_text"><img src="images/center.png" width="320" height="220"/></div>
+		</div>
+		<!-- content end -->
+	</div>
+	<!-- box end -->
+	<!-- footer start -->
+	<div id="footer">
+		<p>
+			<a href="javascript:void(0);">首页</a><b>|</b>
+			<a href="javascript:void(0);">园区管理</a><b>|</b>
+			<a href="javascript:void(0);">动物家园</a><b>|</b>
+			<a href="javascript:void(0);">新闻科普</a><b>|</b>
+			<a href="javascript:void(0);">旅游信息</a><b>|</b>
+			<a href="javascript:void(0);">主题活动</a><b>|</b>
+			<a href="javascript:void(0);">留言板</a>
+		</p>
+		<p>地址：北京市西城区塞尔胡同路100号 TEL：010-54002655 010-54003699 Email：www.wildzood@163.com</p>
+	</div>
+	<!-- footer end -->
+	<script type="text/javascript">
+		//封装获取id的方法
+		function $(id){
+			return document.getElementById(id);
+		};
+		//先获取元素id
+		var bannerDom = $("banner");
+		var prev = $("prev");
+		var next = $("next");
+		var index = 0;
+		var timer = null;//定义一个定时器变量
+		//获取ul和li个数组成数组
+		var uls = bannerDom.getElementsByTagName("ul");
+		var imgs = uls[0].getElementsByTagName("li");
+		var btns = uls[1].getElementsByTagName("li");
+		//遍历获取btns的元素下标(索引)
+		for (var i= 0; i<btns.length ; i++ )
+		{
+			btns[i].index = i; 
+			//鼠标放在li上时触发效果
+			btns[i].onmouseover = function(){
+				show(this.index);
+			}
+		}
+		function show(a){
+			for (var i = 0; i<btns.length; i++){
+				//动态添加类样式
+				btns[i].className="";//先把所有的类样式
+				btns[a].className="none";//通过下标添加类样式
+				imgs[i].style.opacity="0";
+				imgs[a].style.opacity="1";
+			}
+		}
+		//下一页
+		next.onmousedown = function(){
+			index++;
+			if(index>=imgs.length){//当达到最大边界时执行
+				index = 0;//跳到第一张
+				show(index);
+			}else{
+				show(index);
+			}
+		};
+		//上一页
+		prev.onmousedown = function(){
+			index--;
+			if(index<0){
+				index = imgs.length-1;
+				show(index);
+			}else{
+				show(index);
+			}
+		};
+		console.log(index);	
+		//自动播放
+		function autoPlay(){
+			timer = setInterval(function(){//setInterval定时器设置
+				index++;
+				console.log(index);//在控制台显示下标
+				if (index>=imgs.length){
+					index = 0;
+					show(index);
+				}else{
+					show(index);
+				}
+			},3000);//2000ms
+		};
+		autoPlay();
+		//鼠标放上去时,清除定时器
+		bannerDom.onmouseover = function(){
+			clearInterval(timer);
+		}
+		//鼠标移开时，执行定时器
+		bannerDom.onmouseout = function(){
+			autoPlay();
+		}
+	</script>
+</body>
+</html>

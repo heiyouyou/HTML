@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>图片随高度变化平铺</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 18px;
+		font-family: "微软雅黑";
+		background: ;
+	}
+	#box {
+		width: 900px;
+		margin: 0 auto;
+	}
+	#header {
+		height: 100px;
+		background: #986532;
+		margin-bottom: 10px;
+	}
+	#menu {
+		height: 50px;
+		background: #3C6;
+		margin-bottom: 10px;
+	}
+	#main {
+		overflow: auto; /* 溢出的部分以滚动条显示*/
+		background: url(images/2.png) left 0 repeat-y;
+		margin-bottom: 10px;
+	}
+	#sidebar {
+		width: 209px;
+		background: #264040;
+		float: left;
+		color: #fff;
+	}
+	#content {
+		width: 681px;
+		background: #C63;
+		float: right;
+	}
+	#footer {
+		height: 100px;
+		background: #C30;
+	}
+	h2 {
+		width: 250px;
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+	<h2>图片随高度变化平铺</h2>
+	<!-- box start-->
+	<div id="box">
+		<div id="header">header</div>	
+		<div id="menu">menu</div>
+		<!--main start-->
+		<div id="main">
+			<div id="sidebar">sidebar</div>
+			<div id="content">
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+			</div>
+			<!--main end-->
+		</div>
+		<!--box start-->
+		<div id="footer">footer</div>
+	</div>
+</body>
+</html>

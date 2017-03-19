@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>圣诞树的出现</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: url(images/snow-bg.png);
+		background-color: #44C8E0;
+		-webkit-animation: snow 2s linear infinite;
+	}
+	ul,li {list-style:none;}
+	/*定义关键帧，使背景图位置发生变化*/
+	@-webkit-keyframes snow {
+		from{background-position: center 0;}
+		to{background-position: center 333px;}
+	} 
+	.tree {
+		width: 900px;
+		margin: 100px auto;
+		position: relative;
+	}
+	.tree ul li {
+		width: 112px;
+		height: 137px;
+		background: url(images/tree.png);
+		position: absolute;
+		top: 0;
+		left: 0;
+		-webkit-animation: tree 1s linear 2;
+	}
+	.tree ul li:last-child {
+		width: 115px;
+		height: 103px;
+		background: url(images/ice.png);
+		top: 150px;
+		left: 400px;
+		-webkit-animation-duration: 1s;/*执行一次所需的时间*/
+		-webkit-animation-delay: 0.5s;/*延迟执行的时间*/
+	}
+	/*定位每一棵树在不同位置*/
+	.tree ul li:nth-child(1) {
+		top: 0;
+		left: 0;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-delay: 1s;
+	}
+	.tree ul li:nth-child(2) {
+		top: 200px;
+		left: 580px;
+		-webkit-animation-delay: 2s;
+	}
+	.tree ul li:nth-child(3) {
+		top: 80px;
+		left: 250px;
+		-webkit-animation-delay: 0.5s;
+	}
+	.tree ul li:nth-child(4) {
+		top: 0;
+		left: 512px;
+	}
+	.tree ul li:nth-child(5) {
+		top: 220px;
+		left: 200px;
+	}
+	@-webkit-keyframes tree {
+		0%{transform:translate(0,-300px);}/*可以改变元素的位置，有两个值：X Y*/
+		100%{transform:translate(0,0);}
+</style>
+</head>
+<body>
+	<!--audio html5中的音频标签，controls可控进度，autoplay自动播放，loop无限循环	<audio src="music/snow.mp3" controls></audio>-->
+	<audio src="music/snow.mp3" autoplay loop></audio>
+	<div class="tree">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>练习一</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: helvetica, arial, sans-serif;
+		background: url(images/bg1.jpg);
+		text-align: center;
+	}
+	ul,ol {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		font-size: 18px;
+		color: #fff;
+	}
+	.box {
+		display: table-cell;
+		width: 80px;
+		padding: 20px 0 0 20px;
+	}
+	.box li {
+		margin-top: 10px;
+	}
+	.box .nav a{
+		display: block;
+		color: #fff;
+		border-right: 1px solid #3c3c3c;
+		border-left: 1px solid #292929;
+		border-bottom: 1px solid #232323;
+		border-top: 1px solid #545454;
+		background: #292929;
+		padding: 20px;
+		transition: all 1s ease;
+	}
+	.box .nav li:hover >a{/*选中父类下的子类元素*/
+		background: #ddd;
+		transition: all 1s ease;
+	}
+	ol {
+		display: none;
+	}
+	.box .nav li:hover ol {
+		display: block;
+		transition: all 2s ease;
+	}
+	.box .nav li:hover ol a{
+		width: 50px;
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="nav">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a>
+				<ol>
+					<li><a href="#">Me</a></li>
+					<li><a href="#">You</a></li>
+					<li><a href="#">He</a></li>
+					<li><a href="#">She</a></li>
+				</ol>
+			</li>
+			<li><a href="#">Download</a>
+				<ol>
+					<li><a href="#">Me</a></li>
+					<li><a href="#">You</a></li>
+					<li><a href="#">He</a></li>
+					<li><a href="#">She</a></li>
+				</ol>
+			</li>
+			<li><a href="#">Activity</a></li>
+			<li><a href="#">Help</a></li>
+		</ul>
+	</div>
+</body>
+</html>

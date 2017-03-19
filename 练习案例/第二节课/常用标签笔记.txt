@@ -1,0 +1,12 @@
+<!-- 虽然也是一个死链接 但是会自动置顶 -->
+<a href="#">#<a/><br/>
+<!-- 创建一个死链接 -->
+<a href="javascript:void(0);">javascript:void(0)</a>
+<a href="javascript:;" id="a">javascript:void(0)</a>
+
+	<!-- 
+		只有样式的时候 添加px  
+		标签中 不添加
+		标签 也可以理解为 元素
+	-->
+

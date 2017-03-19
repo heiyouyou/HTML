@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>精致页面</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: url(images/bg.png) no-repeat;
+		background-position: center bottom;
+	}
+	a {
+		text-decoration: none;
+	}
+	ul {
+		list-style: none;
+	}
+	#box {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	/*header start*/
+	#header {
+		width: 900px;
+		margin: 0px auto;
+		background: url(images/top.png) no-repeat;
+		padding: 30px 0 120px 0;/*用内容来撑开背景图片*/
+		margin-bottom: 5px;
+	}
+	#header:after {/*清除浮动*/
+		content: "";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
+	#right {
+		float: right;
+		margin-top: 16px;
+	}
+	#right ul #clear {
+		clear: both;
+	}
+	#right ul li {
+		float: left;
+		border-right: 1px solid pink;
+		margin-left: 16px;
+		padding-right: 24px;
+		line-height: 14px;
+	}
+	#right ul li:nth-child(5) {
+		border-right: 1px solid transparent;
+	}
+	#right ul li a {
+		color: #e03694;
+		font-size: 14px;
+		font-weight: 600;
+		transition: all 1s ease;
+	}
+	#img {
+		float: left;
+		transition: all 1s ease;
+	}
+	#right ul li a:hover {
+		transform: scale(1.5);
+		transition: all 1s ease;
+	}
+	#img:hover {
+		transform: scale(1.3);
+		transition: all 1s ease;
+	}
+	/*header start*/
+	#pic {
+		width: 625px;
+		height: 120px;
+		background: url(images/p1.png) no-repeat;
+		background-position: left top;
+	}
+	/*main start*/
+	#main {
+		padding-bottom: 400px;
+		background: url(images/main.png) no-repeat;
+		background-color: #fff;
+		background-position: center bottom;
+		position: relative;
+	}
+	h2 {
+		margin-left: 90px;
+		color: #A9A9A9;
+	}
+	#text {
+		width: 896px;
+		margin: 0 auto;
+		padding: 60px 0 0 80px;
+	}
+	#text1 {
+		width: 280px;
+		position: absolute;
+		bottom: 180px;
+		left: 380px;
+	}
+	#text p:nth-child(1),p:nth-child(2),p:nth-child(3) {
+		line-height: 22px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	#text1 p:nth-child(1),p:nth-child(2),p:nth-child(3) {
+		line-height: 22px;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	.pag1,.pag3 {
+		color: #E03694;
+	}
+	.pag2,.pag4 {
+		color: #A2698B;
+	}
+	#r_img {
+		background: url(images/p2.png) no-repeat;
+		background-position: right top;
+		width: 345px;
+		height: 225px;
+		position: absolute;
+		top: 50px;
+		right: 90px;
+	}
+	#l_img {
+		background: url(images/p3.png) no-repeat;
+		background-position: right top;
+		width: 230px;
+		height: 230px;
+		position: absolute;
+		bottom: 60px;
+		left: 90px;
+	}
+	/*main end*/
+</style>
+</head>
+<body>
+	<div id="box">
+		<!--header start-->
+		<div id="header">
+			<div id="right">
+				<ul>
+					<li><a href="javascrip:void(0);">首页</a></li>
+					<li><a href="javascrip:void(0);">公司动态</a></li>
+					<li><a href="javascrip:void(0);">产品欣赏</a></li>
+					<li><a href="javascrip:void(0);">优惠区域</a></li>
+					<li><a href="javascrip:void(0);">联系我们</a></li>
+					<p class="clear"></p>
+				</ul>
+			</div>
+			<img id="img" src="images/tl.png" width="218" height="34" alt="商标"/>
+		</div>
+		<!--header end-->
+		<div id="pic"></div>
+		<h2>今日可团购的商品</h2>
+		<!--main start-->
+		<div id="main">
+			<!--text start-->
+			<div id="text">
+				<p>
+					<span class="pag1">真心恒久 金秋送福<span>
+				</p>
+				<p>
+					特惠系列蛋糕花样
+				</p>
+				<p>
+					精致的蛋糕包含着你暖融融的爱意送给TA!
+				</p>
+				<p>
+					<span class="pag2">
+						美味心语：欧式蛋糕源于欧洲，借助果酱、新鲜水果、巧克力等装饰...
+					</span>
+				</p>
+			</div>
+			<!--text end-->
+			<div id="r_img"></div>
+			<div id="l_img"></div>
+			<!--text1 start-->
+			<div id="text1">
+				<p>
+					<span class="pag3">青青子矜 悠悠我心<span>
+				</p>
+				<p>
+					特惠系列蛋糕花样
+				</p>
+				<p>
+					精致的蛋糕满含对TA的思念!
+				</p>
+				<p>
+					<span class="pag4">
+						美味心语：酥软原味蛋胚，鸡蛋含量高达60%以上...
+					</span>
+				</p>
+			</div>
+			<!--text1 end-->
+		</div>
+		<!--main end-->
+	</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>对box-sizing的认识</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+	}
+	div {
+		width: 200px;
+		height: 200px;
+		margin: 10px auto;
+		padding: 30px;
+		background: #ddd;
+		word-wrap: break-word;/*使字符字母自动换行*/
+		/*word-break: break-all;使所有内容包括字符字母自动换行*/
+		border: 20px solid red;
+	}
+	.box1 {
+		box-sizing: content-box;/*box-sizing:盒子所占有的空间范围,默认值是content-box*/
+	}
+	.box2 {
+		box-sizing: border-box;/*border-box:盒子动态保持不变border-box=width-padding-border,content-box=width+padding+border*/
+	}
+</style>
+</head>
+<body>
+	<div class="box1">javjjajvjajvjajvajvjavjvjaajvjavjjavjajjvajvvjajjvajjv</div>
+	<div class="box2">javjjajvjajvjajvajvjavjvjaajvjavjjavjajjvajvvjajjvajjv</div>
+</body>
+</html>

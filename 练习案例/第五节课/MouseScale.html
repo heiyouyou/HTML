@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>鼠标悬浮缩放显边框</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: rgba(0, 0, 0, 0.44);
+	}
+	ul {
+		list-style: none;
+	}
+	.box {
+		width: 670px;
+		position: absolute;/*用绝对定位来移动盒子，基点为body左上角。*/
+		top: 90px;
+		left: 350px;
+	}
+	.box .b_box {
+		width: 670px;
+		border: 1px solid rgb(0, 140, 255);
+		background: rgba(0, 171, 255, 0.37);
+		border-radius: 10px;
+	}
+	.box .b_box:after {/*css3中通过创建内容来消除浮动，注意创建的内容为行内元素，需升级为块集元素*/
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.box .b_box li {
+		width: 200px;
+		height: 150px;
+		border: 5px solid transparent;/*透明边框使得它占有一席之地,没加透明边框时为什么会被挤压下来？？？*/
+		float: right;
+		margin: 10px 10px 0 0;
+		transition: all 2s ease;
+		position: relative;
+		cursor: pointer;
+	}
+	.box .b_box li:hover {
+		border: 5px solid #111;/*这里的字号像素一定要与透明边框相同，才会有效果显现出来*/
+		transition: all 2s ease;
+	}
+	.box .b_box li.last {
+		overflow: hidden;
+		margin-bottom: 10px;
+	}
+	.box .b_box li .cover {
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.6);
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all .5s ease .8s;
+		z-index: 400;/*让遮罩层在消失与出现时都在图片最上层*/
+	}
+	.box .b_box li.last .cover {
+		width: 50%;
+	}
+	.box .b_box li.last .cover6 {
+		margin-left: 50%;
+	}
+	.box .b_box li:hover .cover1 {
+		width: 0;	
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover2 {
+		height: 0;	
+		margin-top: 50%;
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover3 {
+		transform: scale(0) skew(180deg,180deg);/*倾斜角度*/
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover4 {
+		transform: scale(0) rotate(-360deg);
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover5 {
+		transform: scale(-1,0);
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover6 {
+		margin-left:100%;
+		transition: all 1s ease;
+	}
+	.box .b_box li:hover .cover7 {
+		margin-left:-50%;
+		transition: all 1s ease;
+	}
+	.box .b_box li img {
+		width: 100%;
+		height: 100%;
+		transition: all .5s ease;
+	}
+	.box .b_box li:hover img {
+		transition: all 1s ease;
+		transform: scale(0.7) rotate(360deg);
+	}
+	.box .b_box li:hover img {
+		transform: scale(1) rotate(0);
+	}
+	.box .b_box li img.bf {
+		position: absolute;/*定位是该图片在另一张图片的上面*/
+		transform: scale(0);
+		z-index: 300;
+		transition: all 1s ease-in;
+	}
+	.box .b_box li:hover img.bf {
+		transform: scale(0.5);
+		transition: all 1s ease .5s;
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="b_box">
+			<li>
+				<div class="cover cover1"></div>
+				<img src="images/1.jpg" alt="1">
+			</li>
+			<li>
+				<div class="cover cover2"></div>
+				<img src="images/2.jpg" alt="2">
+			</li>
+			<li>
+				<div class="cover cover3"></div>
+				<img src="images/3.jpeg" alt="3">
+			</li>
+			<li>
+				<div class="cover cover4"></div>
+				<img src="images/4.jpg" alt="4">
+			</li>
+			<li>
+				<div class="cover cover5"></div>
+				<img src="images/5.jpg" alt="5">
+			</li>
+			<li class="last">
+				<div class="cover cover6"></div>
+				<div class="cover cover7"></div>
+				<img class="bf" src="images/4.jpg" alt="6">
+				<img src="images/6.jpg" alt="6">
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

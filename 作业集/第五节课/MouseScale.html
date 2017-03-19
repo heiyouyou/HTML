@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>鼠标悬浮缩放显边框</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: rgba(0, 0, 0, 0.44);
+	}
+	ul {
+		list-style: none;
+	}
+	.box {
+		width: 670px;
+		position: absolute;/*用绝对定位来移动盒子，基点为body左上角。box为什么没被挤压？？？*/
+		top: 90px;
+		left: 350px;
+	}
+	.box .b_box {
+		width: 670px;
+		border: 1px solid rgb(0, 140, 255);
+		background: rgba(0, 171, 255, 0.37);
+		border-radius: 10px;
+	}
+	.box .b_box:after {/*css3中通过创建内容来消除浮动，注意创建的内容为行内元素，需升级为块集元素*/
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.box .b_box li {
+		width: 200px;
+		height: 150px;
+		border: 5px solid transparent;/*透明边框使得它占有一席之地,没加透明边框时为什么会被挤压下来？？？*/
+		float: right;
+		margin: 10px 10px 0 0;
+		transition: all 2s ease;
+	}
+	.box .b_box li:hover {
+		border: 5px solid #111;/*这里的字号像素一定要与透明边框相同，才会有效果显现出来*/
+		transition: all 2s ease;
+	}
+	.box .b_box li.last {
+		margin-bottom: 10px;
+	}
+	.box .b_box li img {
+		width: 100%;
+		height: 100%;
+		transition: all 1s ease;
+	}
+	.box .b_box li img:hover {
+		transition: all 1s ease;
+		transform: scale(0.7) rotate(360deg);
+	}
+</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="b_box">
+			<li>
+				<img src="images/1.jpg" alt="1">
+			</li>
+			<li>
+				<img src="images/2.jpg" alt="2">
+			</li>
+			<li>
+				<img src="images/3.jpeg" alt="3">
+			</li>
+			<li>
+				<img src="images/4.jpg" alt="4">
+			</li>
+			<li>
+				<img src="images/5.jpg" alt="5">
+			</li>
+			<li class="last">
+				<img src="images/6.jpg" alt="6">
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

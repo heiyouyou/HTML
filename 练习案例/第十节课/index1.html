@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>练习二</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: url(images/bg1.jpg);
+	}
+	ul {
+		list-style: none;
+		text-align: center:
+	}
+	a {
+		text-decoration: none;
+	}
+	.nav {
+		background: #e5e5e5;
+	}
+	.nav li {
+		float: left;
+		position: relative;
+		margin-right: 20px;
+	}
+	.nav li ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		visibility: hidden;
+		opacity: 0;
+	}
+	.nav li a{
+		display: block; 
+		color: #fff;
+		font-size: 20px;
+		background: #292929;
+		padding: 20px;
+		border-right: 1px solid #3c3c3c;
+		border-left: 1px solid #292929;
+		border-bottom: 1px solid #232323;
+		border-top: 1px solid #545454;
+		transition: all 1s ease;
+	}
+	.nav li ul li a {
+		font-size: 0;
+		width: 100px;
+	}
+	.nav li:hover ul{
+		visibility: visible;
+		opacity: 1;
+	}
+	.nav li:hover ul a {
+		font-size: 16px;
+		visibility: visible;
+		opacity: 1;
+		transition: all 1s ease;
+	}
+	.nav li:hover > a {
+		background: #ddd;
+	
+	}
+</style>
+</head>
+<body>
+	<ul class="nav">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">电视剧</a></li>
+		<li>
+			<a href="#">电影</a>
+		</li>
+		<li>
+			<a href="#">动漫</a>
+			<ul class="subs">
+				<li><a href="#">火影忍者</a></li>
+				<li><a href="#">海贼王</a></li>
+				<li><a href="#">名侦探柯南</a></li>
+				<li><a href="#">妖精的尾巴</a></li>
+			</ul>		
+		</li>
+		<li>
+			<a href="#">综艺</a>	
+		</li>
+	</ul>
+</body>
+</html>

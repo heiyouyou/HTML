@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>Css3制作的简易计算器</title>
+<style type="text/css">
+	* {
+		margin: 10px;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		counter-reset: wells;/* 计算器  默认为0*/
+	}
+	input:checked {
+		counter-increment: wells;
+	}
+	.total:after {/*两个::区分伪样式,伪标签；一个:兼容ie8*/
+		content: counter(wells);	
+	}
+</style>
+</head>
+<body>
+	<!--<strong> 标签和 <em> 标签一样，用于强调文本，但它强调的程度更强一些。有加粗强调的作用-->
+	<strong>你喜欢哪种运动：</strong>
+	<ol>
+		<li><label><input type="checkbox"/>篮球</label></li><!--type输入框的类型，checkbox-->
+		<li><label><input type="checkbox"/>网球</label></li><!--label标签可以将包裹住的input标签关联起来-->
+		<li><label><input type="checkbox"/>足球</label></li>
+		<li><label><input type="checkbox"/>羽毛球</label></li>
+		<li><label><input type="checkbox"/>游泳</label></li>
+	</ol>
+	你总共选择了<strong class="total"></strong>种运动
+</body>
+</html>

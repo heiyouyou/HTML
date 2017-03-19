@@ -1,0 +1,46 @@
+@-webkit-keyframes tree {
+		0%{transform:translate(0,-300px);}/*可以改变元素的位置，有两个值：X Y*/
+		100%{transform:translate(0,0);}
+}
+
+<!--audio html5中的音频标签，controls可控进度，autoplay自动播放，loop无限循环	<audio src="music/snow.mp3" controls></audio>-->
+<!--video html5中的标签-->了解video标签的使用，注意video并不是用来当背景的~
+<div class="video"><video src="video/2.mp4" autoplay loop/></div>
+
+.total:after {/*两个::区分伪样式,伪标签；一个:兼容ie8*/
+		content: counter(wells);	
+	}
+
+<!--<strong> 标签和 <em> 标签一样，用于强调文本，但它强调的程度更强一些。有加粗强调的作用-->
+
+outline: 0;/*消除input输入框的默认选中颜色*/
+
+var btn = document.getElementById("btn");//获取元素id的方法
+btn.onclick= function(){//鼠标点击元素触发样式的方法
+	main.style.display = "block";
+}
+
+	<input list="car"/>
+	<datalist id="car">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</datalist>
+	<!--下拉选项框,上面的相当于下面这个，datalist与input的结合使用，datalist要给id,input要给list,并且两者要相同-->
+	<select name="choice">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	<select/>
+	<!--单选框-->
+	<label for="only"/>
+	<input type="radio" name="sex" id="only"/>男
+	<label for="only1"/>
+	<input type="radio" name="sex" id="only1"/>女
+	<!--以上等同于下面，上面的input要给id,并且label要给for属性值与id一样-->
+	<label><input type="radio" name="sex" value="nv" />女</label>
+	<label><input type="radio" name="sex" value="nan" checked="checked"/>男</label>
+
+ide老师建议的书籍：html5+css3 权威指南 第三版和html5 秘籍

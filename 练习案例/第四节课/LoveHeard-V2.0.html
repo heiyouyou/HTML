@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>表白之心</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background: url(images/2.jpg) no-repeat; 
+		background-size: cover;
+	}
+	div {
+		width: 100px;
+		height: 100px;
+		background: pink;
+		margin: 200px auto;
+		transform: rotate(-45deg);/*负数逆时针旋转，正数顺时针旋转*/
+		transition: all 1s ease;
+	}
+	div:hover {
+		transition: all 1s ease;
+	}
+	/*自定义一个自动样式 关键帧*/
+	@-webkit-keyframes Free {/*兼容谷歌内核的写法-webkit-*/
+		from{
+			-webkit-transform: scale(0) rotate(-45deg);
+		}
+		to{
+			-webkit-transform: scale(1.5) rotate(-45deg);
+		}
+	}
+	@-moz-keyframes Free {/*兼容火狐内核的写法-moz-*/
+		from{
+			-moz-transform: scale(0) rotate(-45deg);
+		}
+		to{
+			-moz-transform: scale(1.5) rotate(-45deg);
+		}
+	}
+	/*调用关键帧*/
+	.box {
+		-webkit-animation: Free 1s linear infinite;/* 无限循环动画*/
+		-moz-animation: Free 1s linear infinite;
+		animation: Free 1s linear infinite;
+	}
+	/*在他之下创建内容 创建的内容为行内元素*/
+	div:before {
+		content: "";/*要出现内容 需要定位 或者 升级为块级元素*/
+		width: 100px;
+		height: 100px;
+		background: pink;
+		border-radius: 50%;
+		position: absolute;
+		top: -50px;
+		left: 0;
+	}
+	/*在他之后创建内容*/
+	div:after {
+		content: "";
+		width: 100px;
+		height: 100px;
+		background: pink;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 50px;
+	}
+</style>
+</head>
+<body>
+	<div class="box"></div>
+	<audio src="mp3/Westlife - Beautiful In White.mp3" autoplay loop></audio>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>三列自适应两边固定中间自适应</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 50px;
+		font-family: "微软雅黑";
+	}
+	#left {
+		width: 200px;
+		height: 600px;
+		background: pink;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#center {
+		height: 600px;
+		background: blue;
+		margin:0 200px;
+	}
+	#right {
+		width: 200px;
+		height: 600px;
+		background: red;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+</style>
+</head>
+<body>
+	<div id="left">左边固定</div>
+	<div id="center">中间自适应</div>
+	<div id="right">右边固定</div>
+</body>
+</html>

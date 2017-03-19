@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>太极一</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: gray;
+	}
+	.box {
+		width: 192px;/*初始给定的width:200,196=200-(4+4)*/
+		height: 96px;/*初始给定的height:200,*96=200-(100+4)*/
+		border: 1px solid #000;
+		margin: 100px auto 20px;
+		border-radius: 50%;
+		border-width: 4px 4px 100px 4px;/*边框的粗细(宽度)：上 右 下 左*/
+		position: relative;
+		background: #fff;
+	}
+	.box1 {
+		width:196px;
+		height: 98px;
+		background: #03f;
+		border: 1px solid #f00;
+		margin: 0 auto ;
+		border-radius: 50%;
+		border-width: 2px 2px 100px 2px;
+		position: relative;
+	}
+	.box .yin {
+		width: 22px;/*22+2*37=96*,边框border和width的值加起来就是等于圆的的半径194/2=96*/
+		height: 22px;
+		border: 37px solid #000;
+		border-radius: 50%;
+		position: absolute;
+		top: 48px;/*height的一半*/
+		left: 0px;/*left和top的值是以盒子左边界和上边界为起点到基点的距离*/
+		background: #fff;
+	}
+	.box .yang {
+		width: 22px;/*22+2*38=98*/
+		height: 22px;
+		border: 37px solid #fff;
+		border-radius: 50%;
+		position: absolute;
+		top: 48px;/*父类box的height的一半*/
+		left: 96px;/*父类box的width的一半*/
+		background: #000;
+	}
+	.box1 .yin1 {
+		width: 22px;
+		height: 22px;
+		border: 38px solid #f00;
+		border-radius: 50%;
+		position: absolute;
+		top: 49px;
+		left: 0px;
+		background: #03f;
+	}
+	.box1 .yang1 {
+		width: 22px;
+		height: 22px;
+		border: 38px solid #03f;
+		border-radius: 50%;
+		position: absolute;
+		top: 49px;
+		left: 98px;
+		background: #f00;
+	}
+	/*自定义关键帧*/
+	@-webkit-keyframes free {
+		0%{ transform: rotate(0deg);}
+		25%{ transform: rotate(90deg);}
+		50%{ transform: rotate(180deg);}
+		75%{ transform: rotate(270deg);}
+		100%{ transform: rotate(360deg);}
+		/*0%到100%等同于from到to*/
+	}
+	.rotate {
+		/*-webkit-animation: free 0.8s linear infinite 1s alternate;可以扩写成以下*/
+		-webkit-animation-name: free;/*调用关键帧的名字*/
+		-webkit-animation-duration: 0.8s;/*一次持续执行的时间*/
+		-webkit-animation-timing-function: linear;/*执行的曲线，就是旋转的快慢方式：
+		ease:开始到结束慢慢变快
+		ease-in:由快到慢
+		ease-out:由慢到快
+		linear: 匀速转动;*/
+		-webkit-animation-iteration-count: infinite;/*转动的次数,可以是具体的次数，也可以是无限次(infinite)*/
+		-webkit-animation-delay: 1s;/*延迟执行的时间*/
+		-webkit-animation-direction: alternate;/*转动的方向，有normal(正常方向)，alternate反向*/
+	}
+	.rotate1 {
+		-webkit-animation: free 0.8s ease infinite 2s normal;
+	}
+</style>
+</head>
+<body>
+	<div class="box rotate"><!--一个元素可以定义多个样式的时候，要用空格隔开-->
+		<div class="yin"></div>
+		<div class="yang"></div>
+	</div>
+	<div class="box1 rotate1">
+		<div class="yin1"></div>
+		<div class="yang1"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+box-sizing: content-box;/*box-sizing:盒子所占有的空间范围,默认值是content-box*/
+box-sizing: border-box;/*border-box:盒子动态保持不变；border-box(实际宽度包括了padding和width)=width-padding-border,content-box(实际宽度不包括width和padding)=width+padding+border*/
+
+word-wrap: break-word;/*使字符字母自动换行*/
+/*word-break: break-all;使所有内容包括字符字母自动换行*/
+
+定父类的基点relative,它是以父类的真实的width和height为参考的！！！
+
+		boxDom.onmouseover=function(){
+			mp3Dom.play();/*鼠标悬浮实现播放音乐*/
+		};
+		boxDom.onmouseout=function(){
+			mp3Dom.pause();/*鼠标离开实现停止音乐*/
+		};	
+
+cursor:pointer; /*小拇指*/
+
+transform: scale(0) skew(180deg,180deg);/*倾斜角度*/
+
+可以通过before和after动态给元素添加相同的内容~已达到代码简单，复用性。

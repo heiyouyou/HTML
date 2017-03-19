@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>纯margin固定布局</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 22px;
+		font-family: "微软雅黑";
+		background: #111;
+	}
+	#box {
+		width: 900px;
+		margin: 0 auto;
+	}
+	#header {
+		height: 60px;
+		background: #986532;
+		margin-bottom: 5px;
+	}
+	#main {
+		overflow: hidden;
+		margin-bottom: 5px;
+	}
+	#sidebar {
+		width: 150px;
+		height: 610px;
+		background: #06C;
+		float: left;
+	}
+	#center,#center1 {
+		float: left;
+		margin-left: 5px;
+	}
+	#c1,#c2,#c3 {
+		width: 200px;
+		height: 200px;
+		background: #983298;
+	}
+	#c1,#c2 {
+		margin-bottom: 5px;
+	}
+	#c4{
+		width: 400px;
+		height: 405px;
+		background: #32CB65;
+	}
+	#c5 {
+		width: 400px;
+		height: 200px;
+		margin-top: 5px;
+		background: #CB6532;
+	}
+	#right {
+		width: 135px;
+		height: 610px;
+		background: #FE9898;
+		float: right;
+	}
+	#footer {
+		height: 100px;
+		background: #C30;
+	}
+	h2 {
+		width: 210px;
+		margin: 0 auto;
+		color: #fff;
+		font-size: 22px; 
+	}
+</style>
+</head>
+<body>
+	<h2>纯margin固定布局</h2>
+	<!--box start-->
+	<div id="box">
+		<div id="header">header</div>
+		<!--main start-->
+		<div id="main">
+			<div id="sidebar">sidebar</div>
+			<div id="center">
+				<div id="c1">c1</div>
+				<div id="c2">c2</div>
+				<div id="c3">c3</div>
+			</div>
+			<div id="center1">
+				<div id="c4">c4</div>
+				<div id="c5">c5</div>
+			</div>
+			<div id="right">right</div>
+		</div>
+		<!--main end-->
+		<div id="footer">footer</div>
+	</div>
+	<!--box end-->
+</body>
+</html>

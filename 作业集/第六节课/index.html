@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>作业一固定布局</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 20px;
+		font-family: "微软雅黑";
+		background: #808080;
+	}
+	#box {
+		width: 1000px;
+		margin: 10px auto;
+	}
+	#header {
+		height: 80px;
+		background: #983232;
+		margin-bottom: 10px;
+	}
+	#main {
+		margin-bottom: 10px;
+	}
+	#sidebar {
+		width: 200px;
+		height: 400px;
+		background: #CC6;
+	}
+	#down {
+		width: 720px;
+		height: 200px;
+		background: #CC6;
+	}
+	#main {
+		position: relative;
+	}
+	#center1,#center2 {
+		width: 250px;
+		height: 390px;
+		background: #36C;
+		float: left;
+	}
+	#center1 {
+		margin-right: 10px;
+	}
+	#content {
+		width: 510px;
+		position: absolute;
+		top: 0;
+		left: 200px;
+		margin-left: 10px;
+	}
+	#right {
+		width: 270px;
+		height: 600px;
+		background: #CB6598;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-left: 10px;
+	}
+	#footer {
+		height: 100px;
+		background: #396;
+	}
+	h1 {
+		width: 200px;
+		margin: 0 auto;
+	}
+	marquee {
+		width: 200px;
+		height: 200px;
+	}
+</style>
+</head>
+<body>
+	<h1>固定布局</h1>
+	<!--box start-->
+	<div id="box">
+		<div id="header"><marquee>header</marquee></div>
+		<!--main start-->
+		<div id="main">
+			<div id="sidebar"><marquee direction="up">sidebar</marquee></div>
+			<div id="down"><marquee>down</marquee></div>
+			<div id="content">
+				<div id="center1"><marquee direction="down">center1</marquee></div>
+				<div id="center2"><marquee>center2</marquee></div>
+			</div>
+			<div id="right"><marquee direction="up">right</marquee></div>
+		</div>
+		<!--main end-->
+		<div id="footer"><marquee>footer</marquee></div>
+	</div>
+	<!--box end-->
+</body>
+</html>

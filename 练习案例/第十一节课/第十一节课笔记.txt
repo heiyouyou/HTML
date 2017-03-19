@@ -1,0 +1,9 @@
+a链接的下划线的由中间向两边扩展可以用transform结合css3的伪标签before创建内容来实现
+
+注意：先有样式，后有脚本！！！
+
+jquery实现的banner图原理：是什么？？？
+
+		function $(id){//封装获取id的方法
+			return document.getElementById(id);
+		}

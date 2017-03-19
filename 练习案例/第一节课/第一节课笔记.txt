@@ -1,0 +1,21 @@
+	<!--html5是对html 的提升   
+		2d 3d  视频解析  音频解析  像素解析  html5网页游戏开发
+
+		双边框
+		div+css
+	-->
+
+display: block;/* 升级为块级元素*/ 
+
+transition: all 1s ease;  /* 过渡 */
+transform: scale(2) rotate(360deg);  /*scale放大效果*/
+
+	<!--
+		学知识不用等于没学
+		用不好等于没有学会
+		2d  x y    3d  x y z  
+		html+css   css3  html5 必须有js 基础
+		html+css css3   js > jquery  html5+css3 
+		c++ php  asp  C#  js
+	-->
+	<!-- 谷歌  火狐  ie -->

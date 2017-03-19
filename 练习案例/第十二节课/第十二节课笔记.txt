@@ -1,0 +1,74 @@
+/*
+	filter:过滤器,有多种的过滤方法:
+	opacity
+	invert
+	blur  
+	transform
+	transition
+*/
+
+	*/
+	.img2 {  
+		-webkit-filter: grayscale(0.6);  /*灰色度,值：1% - 100%或0 - 1*/
+	}
+	.img3 {
+		opacity: 0.6;  /*透明度*/
+	}
+	.img4{
+		background:rgba(1,1,1,0.4);  /* rgb(red  green   blue) 0-255红绿蓝，a透明度0 -1*/
+	}
+	.img5 {
+		-webkit-filter: opacity(0.6);
+	}
+	.img6{
+		filter: sepia(0.6);  /* 褐色*/
+		-webkit-filter: sepia(0.6);  /* 褐色*/
+		-moz-filter: sepia(0.6);  /* 褐色*/
+		-o-filter: sepia(0.6);  /* 褐色*/
+	}
+	.img7{
+		-webkit-filter: saturate(0.6);  /* 饱和度*/
+	}
+	.img8{
+		-webkit-filter: hue-rotate(90deg);  /* 角度颜色*/
+	}
+	.img9{
+		-webkit-filter: invert(0.6);  /* 翻转*/
+	}
+	.img10{
+		-webkit-filter: contrast(80%);  /* 对比度*/
+	}
+	.img11{
+		-webkit-filter: blur(6px);  /* 模糊*/
+	}
+	.img13{
+		-webkit-filter: drop-shadow(4px 4px 40px red);  /*阴影滤镜*/
+	}
+	.img14{
+		box-shadow: 4px 4px 40px red;
+	}
+
+js变量：   
+var是一个伪数据类型，js的数据类型：string  number boolean  null  undefine (金木水火土)
+var是复杂型obj 
+
+定义变量(对象)有两种方法一种var，另一种是function。 
+
+// 字符串，用“”‘’来包住。
+var str = '发达国家来付款就好了就好了';   
+
+// 数字类型 
+var  number = 1/5;     
+		
+//boolean false true  //逻辑判断的时候 
+var  flag  =  1<2;  //
+	
+// null  虽然和对象 但是不具备对象的功能，没有就是没有，可以被程序执行
+var  n  = null;
+
+// undefined  未定义 无法被程序执行
+var o;
+
+//obj  对象：具有自己的属性和方法。如：人-属性：头发黑色的，方法： 会写代码
+
+输出语句用alert

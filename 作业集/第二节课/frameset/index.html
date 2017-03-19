@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>frameset与常用标签的综合应用</title>
+<style type="text/css">
+
+</style>
+</head>
+<!--frameset的使用必须将body去掉-->
+	<frameset rows="20%,*"><!-- rows划分上下,cols划分左右 -->
+		<frame src="head.html" noresize></frame><!--noresize禁止拉动属性-->
+		<frameset cols="15%,*">
+			<frame src="left.html" noresize></frame>
+			<frame src="right.html" name="ShowHomework" noresize></frame>
+		</frameset>
+	</frameset>
+</html>

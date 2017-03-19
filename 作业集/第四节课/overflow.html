@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>overflow实现图片放大效果</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: #111;
+	}
+	.boss {
+		width: 640px;
+		margin: 150px auto;
+		border-radius: 10px;
+		padding: 10px;
+		background: #FFC0CB;
+	}
+	.boss .box {
+		/*font-size: 0;*/
+		/*height: 430px;*/
+		border: 7px solid  #4E4C4C;
+		border-radius: 10px;
+		overflow: hidden;
+		background: #fff;
+		/*line-height: 0;*/
+	}
+	.boss .box img {
+		display: block;/此处的升级是为了消除图片(底线)边框的距离/
+		transition: all 1s ease;
+		/*vertical-align: bottom;*/
+	}
+	img:hover {
+		transform: scale(2);
+		transition: all 1s ease;
+	}
+</style>
+</head>
+<body>
+	<div class="boss">
+		<div class="box">
+			<img src="images/1.jpg" width="640" height="430" alt="裂痕"/>
+		</div>
+	</div>
+	<div class="boss">
+		<div class="box">
+			<img src="images/4.jpg" width="640" height="430" alt="裂痕"/>
+		</div>
+	</div>
+	<div class="boss">
+		<div class="box">
+			<img src="images/3.jpeg" width="640" height="430" alt="裂痕"/>
+		</div>
+	</div>
+	<!-- 
+	盒子模型（块级元素）   margin  padding  border			
+	line(行内元素) 模型  顶线  中线 基线  底线
+	怎样处理 div套img 出现的小白框 （说白了就是 底线和边框的距离）
+	1 把图片升级为块级元素
+	2 在其直接父容器 添加相同的高度
+	3 在img中设置vertical-align: bottom/top/middle; 
+	4 在直接父类添加font-size: 0; 前提是你本身没有文字
+	5 在直接父类把行高改为0   line-height: 0;
+	-->
+</body>
+</html>

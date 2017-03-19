@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>重点笔记集锦</title>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		font-size: 16px;
+		font-family: "微软雅黑";
+		background: #5F7553;
+	}
+	a{
+		color: #000;
+		text-decoration:none;
+		font-weight:700;
+	}
+	a:hover{
+		transform: scale(2);
+		transition: all 0.5s ease;
+	}
+	.box2{
+		width: 100%;
+		margin: 0px auto;/块级元素必须给予宽度，才能够是的其居中/
+	}
+	.box1{
+		width: 440px;
+		margin: 0px auto;	
+	}
+	.box2 p{
+		text-indent: 2em;/*em是一个单位，可以缩进两格*/
+		line-height: 34px;/*行高*/	
+	}
+	span{
+		color: #BB1616;
+		font-weight: 700;
+	}
+</style>
+</head>
+<body>
+	<div class="box1">
+		<a href="#" target="_self"><img src="images/xx.jpg" width=440 height=248 alt="美女,刘亦菲"/></a>
+	</div>
+	<div class="box2">
+		<a href="#down">到达底部</a>&nbsp;<a name="top">顶部</a>
+		<p>
+			<a href="https://www.baidu.com/s?ie=UTF-8&wd=img%E6%A0%87%E7%AD%BE" target="_self"><span style="font-size:20px;color: #000;font-weight: 700;">img标签</span></a>的四要素：src(路径)width(宽度)height(高度)alt(图片描述信息)。
+		</p>
+		<p>
+			注意在标签中属性<span style="font-size:20px;color:rgb(59, 156, 167);font-weight:700;">width</span>和<span style="font-size:20px;color:rgb(59, 156, 167);font-weight:700;">height</span>不用带单位px,已经默认带了，但是在样式中一定要带单位。标签也可以理解为元素。
+		</p>
+		<p>
+			<span style="font-size: 20px;color: #000;font-weight:700;">span</span>标签一般要用样式来修饰才会体现它的作用。还有就是<span style="font-size: 20px;color: rgb(9, 6, 88);font-weight:700;">行内元素(内联元素)</span>一般是被<span style="font-size: 20px;color: rgb(9, 6, 88);font-weight: 700;">块集元素</span>所包裹。
+		</p>
+		<p>
+			&lt;a href="#"&gt;&lt;/a"&gt;<br/>
+			&lt;a href="javascript:void(0);"&gt;&lt;/a"&gt;<br/>
+			&lt;a href="javascript:;"&gt;&lt;/a"&gt;<br/>
+			以上的<span style="font-size:20px;color: #000;font-weight:700;">a链接</span>都是一个死链接。区别在于第一个是会置顶的链接，第二第三个不会置顶，一般习惯用第二个。还有a链接可作为<a href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=%E9%94%9A%E7%82%B9&oq=%E5%88%98%E4%BA%A6%E8%8F%B2&rsv_pq=f10857310003f26c&rsv_t=6a1ers8wgkpmPMkH2Iv6OFqiqcgacnqbiRWaeobITxouuTcKXO8Q%2F6hZ5J4&rsv_enter=0&rsv_sug3=40&bs=%E5%88%98%E4%BA%A6%E8%8F%B2" target="_self"><span style="font-size: 20px;color: rgb(9, 6, 88);font-weight:700;">锚点</span></a>用。
+		</p>
+		<p>
+			块级标签具有独占一行的文档流特性，行内标签（内联标签）挨在一起。
+			<a href="javascript:void(0);">font标签</a>是一个字体标签,<a href="javascript:void(0);">br</a>是一个独占一行的标签，<a href="#">hr</a>一个分割线标签,<a href="javascript:void(0);">pre</a>一个预定义格式标签(原样输出标签),<a href="Marquee.html">marquee</a>是一个图文移动标签,<a href="Article.html" target="_self">p</a>是一个段落标签，<a href="javascript:void(0);">h1~h6</a>是一个标题标签，字体逐渐变小，<a href="drive.html">ul</a>、ol、li、dl、dt、dd都是<a href="ul_ol_dl.html">列表标签</a>。
+		</p>
+		<p>
+			用户体验最舒服的字号是<span>12~14px</span>,字体是<span>微软雅黑</span>。
+		</p>
+		<p>
+			<h3>特殊符号</h3>
+			空格&nbsp;；
+			大于号 &gt;；
+			小于号 &lt;；
+			引号 &quot;；
+			版权号 &copy;；
+		</p>
+		<p>
+			一定要注意在样式中一定要给<span>块级元素宽度</span>才能使<span> margin：0px auto</span>(居中显示)有效果
+		</p>
+		<a name="down">底部</a>&nbsp;<a href="#top">到达顶部</a>
+	</div>
+</body>
+</html>

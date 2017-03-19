@@ -1,0 +1,29 @@
+.box div:last-child{  /*当你下面的个数不确定的时候用*/
+		background: pink;	
+	}
+/*
+	.box div:last-child {  
+	css3 匹配到div中最后一个，加上下面的样式
+		margin-bottom: 10px;
+	}
+*/
+
+块集元素的宽度width=100%没有必要,因为它是独占一行的，已经默认width=100%.
+header top 头部
+menu  nav 导航栏
+box main
+sidebar  侧面
+content 内容
+footer bottom底部
+
+
+使用浮动布局块集元素会破坏其他元素的布局，而使用定位布局不会破坏，但会有缺点？？？就是会使代码冗余，繁琐。那为什么布局又不被破坏？？？是因为定位使元素提升到了最高层级，没有了所谓独占一行的特点。
+
+自适应的真正含义是什么？？？
+
+overflow: visible;干嘛用的？？？这是overflow的默认值，就是该值规定内容不被隐藏，即它可以在块框之外也可以看见。
+
+overflow: auto; /* 溢出的部分以滚动条显示*/
+
+h1`h6字号使用的是相对单位em
+

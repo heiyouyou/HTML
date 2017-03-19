@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>CSS3制作的个人技能条</title>
+<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "微软雅黑";
+		background: #000;
+		color: #fff;
+	}
+	ul {
+		list-style: none;
+		padding-top: 30px;
+	}
+	h1 {
+		color: #BBB;
+		font-size: 50px;
+		margin-bottom:80px;
+		text-align: center;
+		padding: 20px;
+	}
+	.box {
+		width: 900px;
+		margin: 0 auto;
+	}
+	.content {
+		padding: 20px 0 0 20px;
+	}
+	.col {
+		width: 280px;
+	}
+	ul li {
+		height: 5px;
+		margin-bottom: 70px;
+		border-radius: 5px;
+		border-top: 1px solid #111;
+		border-left: 1px solid #111;
+		border-right: 1px solid #333;
+		border-bottom: 1px solid #333;
+		position: relative;
+	}
+	ul li em {
+		position: absolute;
+		top: -20px;
+		left: 0;
+	}
+	ul li .expand {
+		height: 1px;
+		background: #2187e7;
+		margin: 2px 0px;/*这里的垂直方向有作用是因为元素被绝对定位了？？？*/
+		box-shadow: 0px 0px 10px 1px rgba(0,198,255,0.4);/*盒子边框阴影效果：水平 垂直 半径 颜色*/
+		position: absolute;/*为什么加绝对定位？？？*/
+	}
+	@-webkit-keyframes html4 { 
+		0%{width: 0;} 
+		100%{width: 90%;}
+	}
+	@-webkit-keyframes css { 
+		0%{width: 0;} 
+		100%{width: 80%;}
+	}
+	@-webkit-keyframes css3 { 
+		0%{width: 0;} 
+		100%{width: 60%;}
+	}
+	@-webkit-keyframes js { 
+		0%{width: 0;} 
+		100%{width: 50%;}
+	}
+	@-webkit-keyframes html5 { 
+		0%{width: 0;} 
+		100%{width: 20%;}
+	}
+	.html4 {
+		width:90%;
+		-webkit-animation: html4 2s linear infinite ;
+	}
+	.css {
+		width:80%;
+		-webkit-animation: css 2s linear 1;
+	}
+	.css3 {
+		width:60%;
+		-webkit-animation: css3 2s ease-out 2;
+	}
+	.js {
+		width:50%;
+		-webkit-animation: js 2s ease-in 3;
+	}
+	.html5 {
+		width:20%;
+		-webkit-animation: html5 2s ease 4;
+	}
+</style>
+</head>
+<body>
+	<h1>CSS3制作的个人技能条</h1>
+	<div class="box">
+		<div class="content">
+			<div class="col">
+				<h2>我的技能</h2>
+				<ul>
+					<li><span class="expand html4"></span><em>Html4</em></li>
+					<li><span class="expand css"></span><em>CSS</em></li>
+					<li><span
+					class="expand css3"></span><em>CSS3</em></li>
+					<li><span
+					class="expand js"></span><em>JS</em></li>
+					<li><span
+					class="expand html5"></span><em>HTML5</em></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

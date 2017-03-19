@@ -1,0 +1,85 @@
+html网页的架构 和人体的骨架差不多
+css 层叠样式表 用来美化衣服
+
+js动态的效果
+
+1.内联样式（就是在标签里面添加的样式）
+缺点：不利于代码的维护会造成代码的冗余
+
+文件命名一定要用英文
+
+2.内部样式
+3.外部样式
+ 	a:定义一个css页面存放所有的样式
+	b:在需要链接的页面添加link标签导入（type指明文件类型 rel声明我的文件是样式表 href 路径）注意link标签与meta标签一样没有反斜杠/
+
+双标签一定要有闭合标签
+
+标签中路径是用src 样式中路径用url
+
+id选择器>类选择器>元素选择器>*通配符选择器
+
+	<!-- 
+		* 通过符选择器  配备任何的标签（元素）
+		e 元素选择器 配备所有使用e的元素
+		. 配备所有使用class 的元素
+		# 配备素有使用id的元素 （id只能出现一次）
+	-->
+
+	<!-- 
+		加逗号是样式共享(组合选择器) 
+		空格是下面一级
+		挨在一起 是里面的属性 ul li.fir    意思是说 class=fir 是li的 样式
+	-->
+
+/*ul li  ==>  ul>li*/  /*首行缩进 1em= 16px*/
+
+position: absolute属性一般会与top和left属性连用;border-radius: 50%可以使得块级元素变成圆
+
+overflow: hidden; /* 没给高度外层块级元素会被挤压，所以要进行清除浮动，自定义高度，有两个功能：溢出隐藏 ，清除浮动，这两个功能是同时进行的*/
+
+		<!--
+			 清除浮动：
+			 1 给父类添加  overflow   缺点：会把想要溢出的效果隐藏掉
+			 2 在当前的最后一个元素创建一个 元素 添加clear：both 样式 缺点：代码多
+		-->
+
+.box div:hover{  /*鼠标放到元素上的时候 触发样式*/
+
+		/*
+			background-image: url(images/1.png);
+			background-repeat: no-repeat; （repeat-x X轴方向平铺，repeat-y Y轴方向平铺）等同于 background: url(images/1.png) no-repeat;
+		*/
+
+margin 是作用于块集元素自己本身，并以自己为参照出发，padding是作用于块集元素里面的直接内容，以内容为参照。
+
+定位是什么？
+
+text-align针对的是水平方向，line-height(行高)针对的是垂直方向。水平居中text-align: center;  垂直居中vertical-align: center<!-- 盒子的高度不是不是文字撑开的？ 不是，是由行高(基线与基线之间的距离)撑开的--> 	text-align: justify;  /*文字两端对齐*/
+
+transform: scale(1.1) rotate（360deg）;  /*放大效果*/
+/*transform: rotate(360deg); /*如果重定义transform只会认最后一个的效果*/
+
+<!-- 
+盒子模型（块级元素）   margin  padding  border			
+line(行内元素) 模型  顶线  中线 基线  底线
+怎样处理 div套img 出现的小白框 （说白了就是 基线和底线的距离）
+1 把图片img升级为块级元素
+2 在其直接父容器 添加相同的高度
+3 在img中设置vertical-align: bottom/top/middle; 
+4 在直接父类添加font-size: 0; 前提是你本身没有文字
+5 在直接父类把行高改为0   line-height: 0;前提是你本身没有文字
+-->
+
+
+position: relative;   /* 相对定位  说白了就是给 tips 加定位的基点(原点或者是参照物)  只要记住绝对定位  相对谁 给谁加 相对定位  说白了就是定位基点(原点或者是参照物)。如果没加相对定位，它就会以浏览器的页面左上角为基点参照*/
+
+background: url(images/1.png)  -94px -4px;  /*定为图片的使用范围  水平(x) 垂直(y)*/
+
+		<!--
+			 清除浮动
+			 1 给父类添加  overflow   缺点：会把想要溢出的效果隐藏掉
+			 2 在当前的最后一个元素创建一个元素，添加clear：both 样式，元素可以是块集元素也可以是行内元素，但是必须升级行内元素才可以显现效果 缺点：代码多
+		-->
+
+/*盒子的宽度width是不包括边框border的*/

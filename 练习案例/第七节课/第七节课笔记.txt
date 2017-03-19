@@ -1,0 +1,57 @@
+叠层关系：background/border<负z-index<block(块级元素)<float(浮动的块集元素)<inline/inline-block(行内-块级元素)<z-index:auto/z-index:0<正z-index
+注意：在同一水平层，后来者居上；父类永远是在子类的下层。
+
+
+display: none;会使元素完全抹杀掉(所在位置没有了)，而opacity可以让元素透明，值在0~1之间，完全透明时位置还在。
+
+px/em/%都是相对单位(相对父类)，如果父类没有标准单位，则以1em=16px=100%;
+im(英寸)/cm(厘米)/mm(毫米)/pt(磅,印刷)/pc(皮卡,印刷)都是绝对单位，在任何浏览器都一样
+
+text-align: center/left/justify/right;(居中对齐/左对齐/两端对齐/右对齐)
+text-decoration: none/overline/underline/line-through;(默认,去掉下划线/顶线/下划线/删除线)。注意:这是用来修饰文本的！！！
+
+font-style: normal/italic/oblique;(字体风格:正常/斜体/偏斜体)
+<i>斜体标签</i>
+<del>删除线标签</del>
+font:  italic 600 20px "方正舒体";  /* 风格 粗线 大小 类型*/一般只用
+考虑后三者
+
+vertical-align: top/middle/bottom/baseline;(垂直对齐方式:顶线对齐/中线对齐/底线对齐/基线对齐)，注意：前三者可以消除图片与边框的空档！！！
+verticla-align: text-top/text-bottom;(以文本的顶线或者底线对齐,同样可以消除图片与边框的空档)
+vertical-align: 100%/-100%;(已正常文本为界，向上移动为正，向下移动为负)
+vertical-align: sub/super;(下标/上标);在样式中sub和sup分别为下标和上标
+注意:vertical-align是对图文都有影响作用的！！！
+
+字间距：		
+letter-spacing: normal;正常
+letter-spacing: 8px;被拉伸		
+letter-spacing: -8px;被挤压
+letter-spacing: 1em;
+letter-spacing: 150%;没有效果
+
+换行：(了解)
+/*默认*/white-space: normal; 
+/* 禁止换行 除非碰到br*/white-space: nowrap;
+/* 保留空格不换行*/white-space:pre;
+/* 保留空格 换行*/white-space: pre-line;
+/* 保留空格 换行*/white-space: pre-wrap;
+注意：以上的属性遇到阿拉伯数字和字母没有作用，会有溢出现象！！！
+
+/*
+text-overflow要实现效果 必须跟overflow 一起用,并且不能给固定宽度
+text-overflow:clip;  /*剪切
+text-overflow:ellipsis;  /* 显示省略号*/
+
+word-wrap: break-word;  /*处理阿拉伯字母和英文字母溢出而得到换行*/
+
+
+/*注意要想背景色和图片都要有，必须将图片和背景色分开写，而且背景色写在图片后(针对的是background缩写形式)*/
+/*background可以扩展为：
+background-color: #fff;
+background-image: url(images/text.png);
+background-repeat: no-repeat;
+background-position: right top;*/
+
+@import url(css/style.css);/*字体的导入要写在样式最前面*/
+
+.font2, .font2+p {   /*font2+p紧跟之后的同胞(同类)元素*/

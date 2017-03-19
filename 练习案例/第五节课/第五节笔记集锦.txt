@@ -1,0 +1,73 @@
+/*margin: 200px auto;  通过外边距达到移动的效果 用在块级元素居中*/
+ /*margin-top: 200px; 
+控制盒子距离上边的位置
+margin-left: 200px;  
+控制盒子距离左边的位置*/
+
+
+	常用的清除浮动：
+	第一种overflow:hidden 给父类加
+	第二种clear:both; 在需要清除元素之后创建一个新的元素
+	第三种css3 after 给父类加如：.box1 ul:after {   /*通过css  创建元素*/
+					content: "";    /*创建一个行内元素*/
+					display: block;
+					clear: both;
+				}
+	第四种 给父类添加固定的高度
+
+
+position: absolute; /*绝对定位 没有定位基点的时候 相对body 定位，一般基点定在它的父类上，并且一个元素只有一个定位（absolute或者relative）,当它的父类是绝对定位或者相对定位时，就以它为基点。？？？？*/
+z-index: 20;   /* 元素的优先级跟随 position 使用 谁大谁在上面*/
+
+
+<!-- 
+1 在以自己为宽度（可以理解为当盒子宽度以文本为宽?）的时候 实现水平垂直居中 用padding
+2 在给定宽度的时候 水平垂直居中 用 line-heigh  text-align（vertical-align不能实现垂直居中，那是用来干嘛的？）
+-->
+vertical-align: baseline;  /*垂直对齐方式  top顶部 middle中间 baseline基线 bottom 底线*/
+	}
+line-height: 0;  /*边框的大小由行高来决定*/
+
+display: block;  /*提升为块级元素*/ display: inline;行内元素*/display: inline-block;  /*行内块级元素，没有了独占一行的特性，但还会受到width和height的影响*/
+
+text-shadow: 0 0 40px pink;  /*文本阴影效果水平 垂直 半径 颜色*/
+box-shadow: 0 0 40px red;  /*盒子边框阴影效果水平 垂直 半径 颜色*/
+
+常用的颜色：
+	第一种 固定色(标准色) red  green black pink graw blue
+	第二种 十六进制 #ccc 0 1 2 3 4 5 6 7 8 9 a b c d e f
+	第三种 rgb(三基色 红绿蓝) 0 - 255
+	第三种 rgba(三基色 红绿蓝 透明度) 三基色范围：0 - 255  透明度：0 - 1，值越大，透明度越低。
+/*background: #123456;优化 两两变一 #ff0000=#f00, #666666可以优化成#666,最少三位/
+
+
+font: 600 16px "方正舒体"; /*简写方法 粗线 大小 风格 */
+
+
+transform: scale(0.8);  /*有 x 和 y两个值，当xy相同，可简写为一个。 以  1 为界限  小于1的缩小 大于1的放大*/
+
+
+border: 1px solid transparent;  /*transparent透明边框,占据了一席之地*/
+
+css3中的匹配选择器
+.box ul li:last-child {  /*匹配到最后一个li，当不知道个数时，就可以用它匹配到最后一个*/
+		margin-bottom: 10px;
+		background: pink;
+	}
+	.box ul li:first-child {  /*匹配第一个*/
+		background: red;
+	}
+	.box ul li:nth-child(2){/*匹配到任意一个，只要给定下标(下标从1开始)*/
+		background: blue;
+	}
+	.box ul li:nth-child(3){
+		background: #66ff99;
+	}
+	.box ul li:nth-child(4){
+		background: #9966cc;
+	}
+	.box ul li:nth-child(5){
+		background: #330000;
+	}
+
+当元素被定成绝对定位时，它是不会被挤压的，而定为基点时是被挤压的？？？因为absolute的元素默认display:inline-block,而relative只是定一个基点而已。

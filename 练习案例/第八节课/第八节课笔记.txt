@@ -1,0 +1,36 @@
+关于border-radius的用法：
+border-top-left-radius: 2em 1em;  /* x轴方向，y轴方向*/
+border-top-right-radius: 4em 0.5em;  /* x  y*/
+border-bottom-right-radius: 0.5em 3em;  /* x  y*/
+border-bottom-left-radius: 0.5em 0.5em;  /* x  y*/
+并不等于：
+border-radius: 2em 1em 4em 0.5em/ 0.5em 0.5em 0.5em 3em;/*斜杠划分top(顶部)和bottom(底部)，斜杠前表示top,前两个值为left(左边)的x、y,后两个值为right的x、y;同样斜杠后一样类推*/
+
+伪标签:	
+::before和::after与:before和:after一样，只是ie8只认识:after和:before，就是为了兼容ie8.		
+伪类选择器：
+:hover 
+:nth-child
+:last-child 
+
+display: table-cell;此元素会作为一个表格单元格显示（可以是元素成为表格元素。）table-layout: fixed;？？？(列宽由表格宽度和列宽度设定。)
+注意：
+display: table-cell;的元素如果内容当中有阿拉伯数字和字母，这个table-cell就没有效果了。
+
+CSS3中消除浮动的完整写法：
+.box:after{
+		content: "";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		height: 0;
+	}
+
+注意：浮动float不是只有块级元素可以用，行内元素也可以的！！！
+img是一个inline-block(行内块级元素)
+
+display: inline/block/inline-block(行内元素/块集元素/行内块集元素);行内元素加width和height是没有效果的，这两个属性属于块级元素的。还有行内元素不受margin-top和margin-bottom的影响。而行内块集元素只是没有了独占一行的特性，还是会有margin、padding、width和height等属性。
+inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。
+
+
+使用padding使多行文本文本水平垂直居中，必须给父类元素一定的宽度width.如果是单行文本或不足一行时，要想使其水平垂直居中，就得给盒子的宽度width与文本一样宽(需到浏览器中调节)

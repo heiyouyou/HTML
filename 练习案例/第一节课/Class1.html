@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>	
+		<title>div制作的相框</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{background:#9F98B9;}
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 10px outset red;/*大小(粗细) 风格(dotted (点线式边框)dashed (破折线式边框)solid (直线式边框)double (双线式边框)groove (槽线式边框)ridge(脊线式边框)inset (内嵌效果的边框)outset (突起效果的边框)
+				颜色 顺序随便*/
+				margin: 100px auto 0;
+				padding:10px;
+				background: #FFC0CB;
+			}
+			span{
+				display:block;/*升级为块级元素*/
+				width:200px;
+				height:200px;
+				border: 1px solid #9044C1;
+				background: #000;
+				color: #fff;
+				text-align: center;
+				line-height:200px;
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+			img{
+				display: block;
+				margin: 10px auto; 
+				background: #FFC0CB;
+				border: 10px inset #9308B1;
+				padding: 10px;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<span>iu歌手-好日子</span>
+		</div>
+		<img src="images/iu.jpg" width="200" height="200" alt="iu可爱歌手"/>
+		
+	</body>
+</html>

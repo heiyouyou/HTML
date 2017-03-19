@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>特殊字体引入的页面</title>
+<style type="text/css">
+	@import url(css/style.css);/*字体的导入要写在样式最前面*/
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		font-size: 12px;
+		font-family: "free";
+		background: url(images/bg.jpg);
+		line-height: 31px;
+	}
+	#box {
+		background-image: url(images/bg2.png);
+		background-repeat: no-repeat;
+		background-position: center top;/背景图片的定位*/
+		margin: 0 auto;/*又没有给宽度为什么加???能居中吗？？？*/
+		overflow: hidden;/*为什么加???*/
+	}
+	#text {
+		margin: 65px auto 0;
+		width: 480px;
+		height: 240px;
+		background: url(images/text.png) no-repeat right top;
+		background-color: #fff;/*注意要想背景色和图片都要有，必须将图片和背景色分开写，而且背景色写在图片后(针对的是background缩写形式)*/
+		/*background可以扩展为：
+		background-color: #fff;
+		background-image: url(images/text.png);
+		background-repeat: no-repeat;
+		background-position: right top;*/
+		padding: 0 270px 0 30px;
+	}
+	.p1,.p2 {
+		text-indent: 2em;
+		line-height: 20px;
+		font-weight: 600;
+	}
+	#show {
+		width: 780px;
+		height: 522px;
+		margin: 0 auto;
+		text-align: center;/*可以使图片水平居中*/
+		background-color: #fff;
+		background-image: url(images/bg3.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+	}
+	#show img {
+		transition: all 1s ease;
+		width: 173px; 
+		height: 172px;
+	}
+	#show img:hover {
+		transform: scale(1.5);
+		transition: all 1s ease;
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="text">
+			<h1>公司简介</h1>
+			<p class="p1">
+				美食汇国际控股有限公司是中国领先的烘焙产品连锁经营商。我们自1992年起生产及销售烘焙产品，是最早进入国际市场的外资投资烘焙企业之一。据Euromonitor的资料，于2010年12月31日，我们拥有及经营国际销售烘焙产品的最大(就收益及零售门店数目而言)一家零售连锁店。
+			<p class="p2">
+				我们主要在长江三角地区的黄金地段及主要城市进行营运，包括上海、江苏省及浙江省。截至2011年12月31日，共有898间零售门店，形成多管道零售网路，通过好邻居店、地线店、旗舰店及欧式现烤店吸引不同客户分部。我们销售逾2,200种面包、蛋糕、月饼、甜点及若干其他产品，更每月推出多种新产品，满足消费者的不同需求。我们拥有五家中央烘焙工厂，集中采购材料，重视产品的安全、营养及品质稳定性。
+			</div>
+		</div>
+		<div id="show">
+			<img src="images/1.png" alt="1"/>		
+			<img src="images/2.png" alt="2"/>		
+			<img src="images/3.png" alt="3"/>		
+			<img src="images/4.png" alt="4"/>		
+			<img src="images/5.png" alt="5"/>		
+			<img src="images/6.png" alt="6"/>		
+			<img src="images/7.png" alt="7"/>	
+		</div>
+	</div>
+</body>
+</html>
